@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer=""></script>
+    <title>Library</title>
+  </head>
+  <body>
+    <h1 class="title">Library</h1>
+
+    <div class="controls-container">
+      <button id="newBook" onclick="toggleInputForm()">New book</button>
+      <button class="hide" id="addBook" type="submit" form="inputBook">
+        Add book
+      </button>
+    </div>
+
+    <div class="card-container">
+      <div class="hide input card" id="input">
+        <form id="inputBook" onsubmit="submitInputForm(event)">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            id="title"
+            required="true"
+            placeholder="Harry Potter"
+          />
+          <br />
+          <br />
+          <label for="author">Author</label>
+          <input
+            type="text"
+            id="author"
+            required="true"
+            placeholder="JK Rowling"
+          />
+          <br />
+          <br />
+          <label for="pages">Pages</label>
+          <input
+            type="number"
+            id="pages"
+            required="true"
+            placeholder="eg. 132"
+          />
+        </form>
+      </div>
+      <!-- I want to use javascript to add a card right here -->
+      <!-- <div class="card">
+        <h2>Harry Potter</h2>
+        <p>JKK Rowling</p>
+        <p>500 pages</p>
+        <div class="card-controls">
+          <button id="readBook" onclick="toggleReadStatus()">Read ✅</button>
+          <button id="deleteBook" onclick="deleteABook()">Delete</button>
+        </div>
+      </div> -->
+    </div>
+  </body>
+</html>
